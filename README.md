@@ -15,13 +15,13 @@ A real-time password strength checker and security awareness tool built with Jav
 
 ## Screenshot
 
-![Screenshot](assets/logo.png)
+![Screenshot](assets/logo.jpg)
 
 ## Author
 Aazaf Ritha | Cybersecurity Enthusiast | [Click here to show profile](www.linkedin.com/in/aazafritha)
 
 ## Live Demo
-[Click here to try](https://your-username.github.io/password-security-checker/)
+[Click here to try](https://aazafritha.github.io/password-security-checker/)
 
 ## License
 MIT
