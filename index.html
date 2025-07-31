@@ -3,31 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <title>Password Security Checker</title>
- <link rel="stylesheet" href="styles.css" />
-<script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Load zxcvbn for password strength analysis -->
+  <script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
+  <!-- Load jsPDF for PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
   <div class="container">
     <h1>Password Security Checker</h1>
+
+    <!-- Password input field with show/hide button -->
     <div class="input-wrapper">
       <input type="password" id="passwordInput" placeholder="Enter your password" />
       <button type="button" id="toggleBtn">👁️</button>
     </div>
 
+    <!-- Strength meter and feedback area -->
     <div id="strengthMeter"></div>
     <p id="feedbackText"></p>
     <p class="tip">Use uppercase, lowercase, symbols, and 12+ characters</p>
-
     <div id="loadingSpinner" class="spinner hidden">Checking...</div>
+
+    <!-- Additional buttons -->
+    <button id="generateBtn">🔁 Generate Strong Password</button>
+    <button id="copyBtn">📋 Copy Password</button>
+    <button id="downloadBtn">📄 Download Report</button>
+    <p><a href="#" id="policyLink">🔒 View Password Policy</a></p>
   </div>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <img src="assets/logo.jpg" alt="Aazaf Logo" class="footer-logo" />
-      <p>© 2025 Aazaf Ritha. All rights reserved.</p>
+  <!-- Modal for password policy -->
+  <div id="policyModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h3>Password Policy & Tips</h3>
+      <ul>
+        <li>Minimum 12 characters</li>
+        <li>Include uppercase, lowercase, numbers, symbols</li>
+        <li>Avoid names, common words, repeated patterns</li>
+      </ul>
+      <p><strong>Example Strong Passwords:</strong></p>
+      <code>z!K4w2#A1q3</code><br>
+      <code>M0nkey$Tr33_88</code>
     </div>
-  </footer>
+  </div>
 
+  <!-- Author section -->
+  <div class="bottom-info">
+    <img src="assets/logo.jpg" alt="Aazaf Ritha Logo" class="bottom-logo" />
+    <p>Crafted with ❤️ by Aazaf Ritha — Cybersecurity Enthusiast</p>
+    <div class="social-links">
+      <a href="https://github.com/AazafRitha" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/aazafritha" target="_blank">LinkedIn</a> |
+      <a href="https://twitter.com/your_username" target="_blank">Twitter</a>
+    </div>
+  </div>
+
+  <!-- Link external JS file -->
   <script src="script.js" defer></script>
 </body>
 </html>
